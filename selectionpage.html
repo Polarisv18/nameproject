@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Category</title>
+    <link rel="stylesheet" href="selectionpagestyles.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li class="logo"><a href="welcome page.html">[Name]</a></li>
+            <li><a href="selectionpage.html">home page</a></li>
+            <li><a href="aboutus.html">about namers</a></li>
+            <li><a href="getintouch.html">tell us your cool spots</a></li>
+            <li><a href="thecompletelist.html">the complete [name] list</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="categories">
+            <div class="selection-container">
+                <span class="typing" id="selection-text">I'm looking a [Name] for</span>
+                <ul class="scroll-list" id="category-list">
+                    <li><a href="coffeecategory.html">coffee spots to linger</a></li>
+                    <li><a href="events.html">some cool events</a></li>
+                    <li><a href="tba.html">surprise me</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 [Name]. All rights reserved.</p>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+        const scrollThreshold = 100; // Set the scroll threshold (in pixels)
+
+        window.addEventListener('scroll', function() {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            // Check if scrolling up and if the scroll distance exceeds the threshold
+            if (st < lastScrollTop && (lastScrollTop - st) > scrollThreshold) {
+                // Redirect only if scrolling up beyond the threshold
+                if (st > 0) {
+                    window.location.href = 'index.html'; // Redirects to the welcome page
+                }
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        }, false);
+
+        // Typing effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectionText = document.getElementById('selection-text');
+            const categoryList = document.getElementById('category-list');
+            const selectionMessage = selectionText.textContent;
+            selectionText.textContent = '';
+            categoryList.style.display = 'none';
+
+            let i = 0;
+            function typeSelection() {
+                if (i < selectionMessage.length) {
+                    selectionText.textContent += selectionMessage.charAt(i);
+                    i++;
+                    setTimeout(typeSelection, 100); // Adjust typing speed here
+                } else {
+                    categoryList.style.display = 'block';
+                }
+            }
+
+            typeSelection();
+        });
+    </script>
+</body>
+</html>

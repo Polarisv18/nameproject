@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to [Name]</title>
+    <link rel="stylesheet" href="welcomepagestyles.css">
+</head>
+<body>
+    <header>
+        <div class="content">
+            <h1 class="typing" id="welcome-text">Welcome to [Name]</h1>
+            <p class="typing" id="description-text">You want to hang out, need a place to visit, you’ll need a [Name]</p>
+            <div class="arrow" id="arrow">↓</div>
+        </div>
+    </header>
+    <footer>
+        <p>© 2024 [Name]. All rights reserved.</p>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) { // Adjust the value as needed
+                window.location.href = 'selectionpage.html';
+            }
+        });
+
+        // Typing effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeText = document.getElementById('welcome-text');
+            const descriptionText = document.getElementById('description-text');
+            const arrow = document.getElementById('arrow');
+            const welcomeMessage = welcomeText.textContent;
+            const descriptionMessage = descriptionText.textContent;
+            welcomeText.textContent = '';
+            descriptionText.textContent = '';
+            arrow.style.display = 'none';
+
+            let i = 0;
+            function typeWelcome() {
+                if (i < welcomeMessage.length) {
+                    welcomeText.textContent += welcomeMessage.charAt(i);
+                    i++;
+                    setTimeout(typeWelcome, 100); // Adjust typing speed here
+                } else {
+                    i = 0;
+                    setTimeout(typeDescription, 500); // Delay before starting the next text
+                }
+            }
+
+            function typeDescription() {
+                if (i < descriptionMessage.length) {
+                    descriptionText.textContent += descriptionMessage.charAt(i);
+                    i++;
+                    setTimeout(typeDescription, 50); // Faster typing speed here
+                } else {
+                    arrow.style.display = 'block';
+                }
+            }
+
+            typeWelcome();
+        });
+    </script>
+</body>
+</html>

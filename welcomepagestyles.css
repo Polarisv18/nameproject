@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Archivo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 2rem;
+    text-align: left;
+    border-bottom: 2px solid #000;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .content {
+    max-width: 600px;
+}
+
+header h1 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+}
+
+header .arrow {
+    font-size: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+header .arrow {
+    display: none; /* Initially hide the arrow */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    color: #000;
+    border-top: 2px solid #000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

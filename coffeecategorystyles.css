@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Archivo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 2rem;
+}
+
+.nav-links .logo {
+    position: absolute;
+    left: 1rem; /* Adjust the left position as needed */
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* CSS for the logo */
+.logo a {
+    font-weight: bold;
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px; /* Adjust the size as needed */
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Ensure it inherits the color of the other links */
+}
+
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    margin-top: 4rem; /* Adjust for fixed nav height */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.coffee-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+
+.coffee-profile {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1rem;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.coffee-profile img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border: 2px solid #000;
+}
+
+.description {
+    flex: 1;
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+.description h2 {
+    margin: 0;
+    font-size: 1.2rem; /* Smaller font size */
+    font-weight: bold;
+}
+
+.description p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+.description a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+.description a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    color: #000;
+    border-top: 2px solid #000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem; /* Smaller font size */
+}

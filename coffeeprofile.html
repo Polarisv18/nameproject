@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Name</title>
+    <link rel="stylesheet" href="coffeeprofilestyles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li class="logo"><a href="welcome page.html">[Name]</a></li>
+                <li><a href="selectionpage.html">home page</a></li>
+                <li><a href="aboutus.html">about namers</a></li>
+                <li><a href="getintouch.html">tell us your cool spots</a></li>
+                <li><a href="listofplaces.html">the complete [name] list</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Coffee Shop Name</h1>
+    </header>
+    <main>
+        <article class="coffee-review">
+            <h2>Review</h2>
+            <p>In-depth review of the coffee shop. What we like, what we don't like.</p>
+            <h3>Photos</h3>
+            <div class="photo-gallery">
+                <img src="coffee-shop-inside1.jpg" alt="Inside the Coffee Shop 1">
+                <img src="coffee-shop-inside2.jpg" alt="Inside the Coffee Shop 2">
+                <!-- Add more photos as needed -->
+            </div>
+            <h3>Location</h3>
+            <div id="map"></div>
+            <!-- Google Maps integration -->
+        </article>
+    </main>
+    <footer>
+        <a href="coffee.html">Back to Coffee Shops</a>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var location = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</body>
+</html>

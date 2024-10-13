@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Us About Your Cool Spot</title>
+    <link rel="stylesheet" href="getintouchstyles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li class="logo"><a href="welcome page.html">[Name]</a></li>
+                <li><a href="selectionpage.html">home page</a></li>
+                <li><a href="aboutus.html">about namers</a></li>
+                <li><a href="getintouch.html">tell us your cool spots</a></li>
+                <li><a href="listofplaces.html">the complete [name] list</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Tell Us About Your Cool Spot</h1>
+    </header>
+    <main>
+        <section class="intro-text">
+            <p>At [Name], we are always on the lookout for cool spots and like-minded individuals to join our Namer community. We would love to hear about your personal favorite spots to linger in the city.</p>
+        </section>
+        <form action="mailto:vdtheminh@gmail.com" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Name<span class="required">*</span>:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address<span class="required">*</span>:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="social-media">Social Media Handle:</label>
+                <input type="text" id="social-media" name="social-media" placeholder="Your Social Media Handle (Optional)">
+            </div>
+            <div class="form-group">
+                <label for="store">Store to Visit:</label>
+                <input type="text" id="store" name="store" placeholder="Store Name and Address">
+            </div>
+            <div class="form-group">
+                <label for="reason">Why Should We Visit?</label>
+                <textarea id="reason" name="reason" rows="4" placeholder="Tell us why this spot is special"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="images">Attach Images:</label>
+                <input type="file" id="images" name="images" accept="image/*" multiple>
+            </div>
+            <div class="form-group">
+                <label for="spotify">Spotify Link:</label>
+                <input type="url" id="spotify" name="spotify" placeholder="Spotify Link (Optional)">
+            </div>
+            <div class="form-group">
+                <label for="desires">Tell Us Your Deepest Desires:</label>
+                <textarea id="desires" name="desires" rows="4" placeholder="Anything else you want to tell us?"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 [Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
